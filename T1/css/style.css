@@ -1,0 +1,178 @@
+html, body {
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg , rgb(57, 57, 57) , rgb(0, 0, 0)), white;
+  animation: efect-background 10s ease infinite;
+}
+
+@keyframes efect-background {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
+
+/*---------------------Style pagina de carregamento-----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+
+.load-screen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+.text {
+    font-family:  'Special Elite', cursive;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    margin: -45px 0 30px -95px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    animation: digitacao 5s steps(60) 1s infinite  both;
+}
+
+@keyframes digitacao{
+    from{
+      width: 0;
+    }
+    to{
+       width: 15.45em;
+    }
+  }
+
+.button:hover {
+  transform: scale(1.2);
+  background:linear-gradient(to bottom, rgb(43, 255, 0) 5%,rgb(255, 255, 255) 100%);
+}
+
+.button {
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 22px;
+   height: 55px;
+   width: 100px;
+   border-radius: 10%;
+   background-color: rgb(255, 255, 255);
+   cursor: pointer;
+}
+
+/*---------------------Style pagina de game over-----------------------*/
+
+
+.pontos{
+  font-family:  'Special Elite', cursive;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  margin: -45px 0 30px -95px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  animation: pontos 6s steps(60)  infinite  both;
+  animation-delay: 7500ms;
+}
+
+@keyframes pontos{
+  from{
+    width: 0;
+  }
+  to{
+     width: 11.40em;
+  }
+}
+
+.game-over{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin: -45px 0 0 -45px;
+}
+
+.game{
+  font-family:  'Special Elite', cursive;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  animation: efeito 10s reverse both;
+}
+
+.tela-over {
+  background: linear-gradient(-45deg , rgb(57, 57, 57) , rgb(0, 0, 0)), white;
+  animation: efect-background 10s ease infinite;
+  height: 100vh;
+  width: 100vw;
+}
+
+.over{
+  font-family:  'Special Elite', cursive;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  animation: efeito2 10s reverse both;
+}
+
+@keyframes efeito{
+  100%{
+    font-size: 50px;
+  }
+  30%{
+   opacity: 0; 
+  }
+  0%{
+    opacity: 0;
+    font-size: 0px;
+  }
+}
+
+@keyframes efeito2{
+  100%{
+    font-size: 60px;
+  }
+  30%{
+    opacity: 0; 
+   }
+  0%{
+    opacity: 0;
+    font-size: 0px;
+  }
+}
+
+/*---------------------Style joystick-----------------------*/
+
+.joystick {
+  pointer-events: auto;
+  position: absolute;       
+  display: block; 
+  touch-action: manipulation;
+}
+
+.botoes {
+  opacity: 0.58;
+  margin: 86vh 0 0 65vw;
+  transform: scale(1.10);
+  position: absolute;
+}
+
+
+.joystickTiroAr {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 32px;
+  width: 50px;
+}
+.joystickTiroTerra {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 32px;
+  width: 50px;
+
+}
+

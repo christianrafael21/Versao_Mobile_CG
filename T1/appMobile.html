@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trabalho - Etapa 1</title>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../T1/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+  </head>
+
+<body>
+  <!-- Import maps polyfill -- Remove this when import maps will be widely supported-->
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>  
+  <script type="importmap"> 
+    {"imports": {"three": "../build/three.module.js"}} 
+  </script>  
+
+
+
+<!----------------------------Criando tela de carregamento------------------------>
+  <section id="load-tela">
+    <div class = "load-screen" id="load-screen">
+      <div id="loader"></div>
+      <div class = "text"><h3>DÊ INÍCIO A ESSA JORNADA</h3></div>     
+    <button class="button" id="myBtn">START</button>
+  </section>
+
+<!------------------------Criando tela de game over---------------->
+  <section id="over">
+    <div class = "game-over" id="game-over" style="display: none;">
+      <div id="loader-over"></div>
+      <div class = "game"><h1>GAME</h1></div>     
+      <div class = "over"><h1>OVER</h1></div> 
+      <div class = "pontos"><h1>Retornando...</h1></div>
+    </section>
+
+<!-----------------Criando joystick-------------------------->
+<section id="joystick">
+  <div id="joys">
+    <div class="joystickWrapper1" id="joystickWrapper1"></div>
+    <div class="botoes" role="group" aria-label="Basic mixed styles example" style="display: none;">
+      <button type="button" class="joystickTiroAr" id="joystickAr">AR</button> 
+      <button type="button" class="joystickTiroTerra" id="joystickTerra">TERRA</button>
+    </div>
+  </div>
+  </section>
+<script src="../libs/other/nipplejs.js"></script>  
+
+   <div id="webgl-output">    
+    <script type="module" src="appMobile.js"></script>
+  </div>
+</body>
+
+</html>
